@@ -5,7 +5,7 @@ const createMessages = async (req, res, next) => {
     const newMessage = req.body;
     const message = await Messages.create(newMessage);
 
-    res.status(201).json({ message });
+    res.json(message);
   } catch (error) {
     next(error);
   }
